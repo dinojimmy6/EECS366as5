@@ -215,11 +215,30 @@ void MotionFunc(int x, int y)
 	{
 		// Move the Near Plane
 		// ADD CODE HERE
+		float result = pDisplayCamera->NearPlane + (MouseY - y)*0.1;
+		printf("current near plane is %f, current far plane is %f\n", pDisplayCamera->NearPlane, pDisplayCamera->FarPlane);
+		if ((result < pDisplayCamera->ViewPlane + 1) || (result + 1 >= pDisplayCamera->FarPlane))
+		{
+			return;
+		}
+		else {
+			pDisplayCamera->NearPlane = result;
+		}
+
+
 	}
 	if(MouseRight && SelectionMode)
 	{
 		// Move the Far Plane
 		// ADD CODE HERE
+		float result = pDisplayCamera->FarPlane + (MouseY - y)*0.1;
+		printf("current near plane is %f, current far plane is %f\n", pDisplayCamera->NearPlane, pDisplayCamera->FarPlane);
+		if (pDisplayCamera->NearPlane + 1 >= result) {
+			return;
+		}
+		else {
+			pDisplayCamera->FarPlane = result;
+		}
 	}
     
 	MouseX = x;
