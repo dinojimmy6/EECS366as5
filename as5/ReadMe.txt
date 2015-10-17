@@ -1,40 +1,6 @@
-========================================================================
-    CONSOLE APPLICATION : as5 Project Overview
-========================================================================
-
-AppWizard has created this as5 application for you.
-
-This file contains a summary of what you will find in each of the files that
-make up your as5 application.
+This is Haifang Chen and James Du assignment 5.
 
 
-as5.vcxproj
-    This is the main project file for VC++ projects generated using an Application Wizard.
-    It contains information about the version of Visual C++ that generated the file, and
-    information about the platforms, configurations, and project features selected with the
-    Application Wizard.
-
-as5.vcxproj.filters
-    This is the filters file for VC++ projects generated using an Application Wizard. 
-    It contains information about the association between the files in your project 
-    and the filters. This association is used in the IDE to show grouping of files with
-    similar extensions under a specific node (for e.g. ".cpp" files are associated with the
-    "Source Files" filter).
-
-as5.cpp
-    This is the main application source file.
-
-/////////////////////////////////////////////////////////////////////////////
-Other standard files:
-
-StdAfx.h, StdAfx.cpp
-    These files are used to build a precompiled header (PCH) file
-    named as5.pch and a precompiled types file named StdAfx.obj.
-
-/////////////////////////////////////////////////////////////////////////////
-Other notes:
-
-AppWizard uses "TODO:" comments to indicate parts of the source code you
-should add to or customize.
-
-/////////////////////////////////////////////////////////////////////////////
+All of the functionality specified by the assignment are implemented. 
+In order to see clipped objects, be sure to zoom in and look around by using mouse functions under camera mode.
+There are random lines around because of not clipping world axis, which is not required in this assignemnt.

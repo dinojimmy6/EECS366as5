@@ -1,6 +1,3 @@
-// Assignment5Template.cpp
-// Computer Graphics - EECS 366/466 - Spring 2005
-
 // Allow use of M_PI constant
 #define _USE_MATH_DEFINES
 
@@ -370,7 +367,7 @@ void KeyboardFunc(unsigned char key, int x, int y)
 int main(int argc, char* argv[])
 {
     pDisplayScene = new Scene;
-	pDisplayScene->Load("scene2.dat");
+	pDisplayScene->Load(argv[1]);
 	pDisplayCamera = new Camera;
 	pDisplayCamera->ViewWidth = (float)WindowWidth/32;
 	pDisplayCamera->ViewHeight = (float)WindowHeight/32;
