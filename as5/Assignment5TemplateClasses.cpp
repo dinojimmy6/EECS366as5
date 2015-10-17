@@ -287,7 +287,7 @@ void Scene::Load(char* file)
 
 Camera::Camera()
 {
-	Position.x = 10.0;
+	Position.x = 5.0;
 	Position.y = 0.0;
 	Position.z = 0.0;
 
@@ -560,6 +560,7 @@ Vertex* ClipPolygon(int count, Vertex* input, int* out_count)
 			S = E;
 		}
 		oIndex = nIndex;
+		delete[] inputList;
 	}
 	*out_count = oIndex;
 	return outputList;
