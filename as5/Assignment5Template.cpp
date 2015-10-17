@@ -216,10 +216,10 @@ void MotionFunc(int x, int y)
 		// Move the Near Plane
 		// ADD CODE HERE
 		float result = pDisplayCamera->NearPlane + (MouseY - y)*0.1;
-		printf("current near plane is %f, current far plane is %f\n", pDisplayCamera->NearPlane, pDisplayCamera->FarPlane);
-		if ((result < pDisplayCamera->ViewPlane + 1) || (result + 1 >= pDisplayCamera->FarPlane))
+		printf("image plane is %f, near plane is %f, far plane is %f\n", pDisplayCamera->ViewPlane, pDisplayCamera->NearPlane, pDisplayCamera->FarPlane);
+		if ((result < 1.0) || (result + 0.1 >= pDisplayCamera->FarPlane))
 		{
-			return;
+			//do nothing
 		}
 		else {
 			pDisplayCamera->NearPlane = result;
@@ -232,9 +232,9 @@ void MotionFunc(int x, int y)
 		// Move the Far Plane
 		// ADD CODE HERE
 		float result = pDisplayCamera->FarPlane + (MouseY - y)*0.1;
-		printf("current near plane is %f, current far plane is %f\n", pDisplayCamera->NearPlane, pDisplayCamera->FarPlane);
-		if (pDisplayCamera->NearPlane + 1 >= result) {
-			return;
+		printf("image plane is %f, near plane is %f, far plane is %f\n", pDisplayCamera->ViewPlane, pDisplayCamera->NearPlane, pDisplayCamera->FarPlane);
+		if (pDisplayCamera->NearPlane + 0.1 >= result) {
+			//do nothing
 		}
 		else {
 			pDisplayCamera->FarPlane = result;
